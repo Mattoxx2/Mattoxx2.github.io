@@ -1,0 +1,266 @@
+.background{
+     background: linear-gradient(70deg, blue, pink); 
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px
+    #c5c5c6;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav-icon span{
+    font-family: Roboto Flex, sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 400;
+    color: #333
+}  
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container a{
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+}
+
+.navlinks-container a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform:scaleX(0);
+    transform-origin: left;
+    background: #333;
+    transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after{
+    transform: scaleX(1);
+}
+
+.imgg{
+    width: 75px;
+    height: 40px;
+}
+
+.dessus{
+    font-size: 25px;
+}
+
+td{
+    border: 1px solid black;
+}
+
+.tab1{
+    border: 1px solid black;
+}
+
+.texte{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.textepropos{
+    text-align: center;
+}
+
+div{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tablelang{
+    text-align: center;
+    border: solid 4px black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: grey;
+}
+
+.tailletab{
+    width: 350px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+hr{
+    width: 700px;
+    height: 2px;
+    background-color: white;
+}
+
+.reunion{
+    margin-left: 6%;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.expli{
+    font-size: 20px;
+}
+
+.projetp{
+    text-align: center;
+}
+
+.stagef{
+    text-align: center;
+}
+
+.taillecel{
+    width: 110px;
+}
+
+.contaico{
+    margin:0 auto;
+    border-spacing: 15px 0px;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+}
+
+.haut{
+    width: 35px;
+    height: 35px;
+    margin-left: 97%;
+}
+
+.photoettexte{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.photomoi{
+    margin-left: 60px;
+    border: 10px solid black;
+}
+
+@media (max-width: 900px){
+    nav {
+        padding: 15px 20px;
+        position: relative;
+    }
+    .nav-icon{
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .nav-icon span{
+        font-size: 22px;
+    }
+
+    .main-navlinks{
+        order: 1;
+    }
+    /* Hamburger */
+    .hamburger{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #FAFAFA;
+        align-items: center;
+        position: relative;
+    }
+    .hamburger span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s 
+        ease-out;
+    }
+
+    .hamburger span:nth-child(1),
+    .hamburger span:nth-child(3){
+        transition: transform 0.3s
+        ease-out;
+    }
+
+    .hamburger span:nth-child(1){
+        transform: translateY(7px);
+    }
+
+    .hamburger span:nth-child(3){
+        transform: translateY(-7px);
+    }
+
+     .hamburger.open span:nth-child(1){
+        transform: translate(0) rotate(135deg);
+    }
+
+     .hamburger.open span:nth-child(2){
+        opacity: 0.6;
+        transition: opacity 0s ease-out;
+    }
+
+    .hamburger.open span:nth-child(3){
+        transform: translate(0) rotate(-135deg);
+    } 
+
+    .navlinks-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: #fafafa;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #c5c5c6; 
+        transform: translate(-100%);
+    }
+    .open{
+        transform: translate(0%);
+    }
+    .navlinks-container a{
+        font-size: 18px;
+        margin: 10px 0;
+    }   
+}
+
+@media (max-width: 500px) {
+    .nav-icon img{
+        width: 30px;
+    }
+    .nav-icon span{
+        font-size: 20px;
+    }
+}
